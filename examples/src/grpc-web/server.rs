@@ -25,25 +25,31 @@ impl Greeter for MyGreeter {
     }
 }
 
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    tracing_subscriber::fmt::init();
+fn main() {
+    let rt = tokio::runtime::Builder::new_multi_thread()
+        .enable_all()
+        .build()
+        .unwrap();
 
-    let addr = "127.0.0.1:3000".parse().unwrap();
+    rt.block_on(async {
+        tracing_subscriber::fmt::init();
 
-    let greeter = MyGreeter::default();
-    let greeter = GreeterServer::new(greeter);
-    let greeter = tonic_web::config()
-        .allow_origins(vec!["127.0.0.1"])
-        .enable(greeter);
+        let addr = "127.0.0.1:3000".parse().unwrap();
 
-    println!("GreeterServer listening on {}", addr);
+        let greeter = MyGreeter::default();
+        let greeter = GreeterServer::new(greeter);
 
-    Server::builder()
-        .accept_http1(true)
-        .add_service(greeter)
-        .serve(addr)
-        .await?;
+        let greeter = tonic_web::config() //2
+            .allow_origins(vec!["127.0.0.1"])
+            .enable(greeter);
 
-    Ok(())
+        println!("GreeterServer listening on {}", addr);
+
+        Server::builder()
+            .accept_http1(true) //2
+            .add_service(greeter)
+            .serve(addr)
+            .await
+            .unwrap();
+    });
 }
