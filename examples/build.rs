@@ -13,7 +13,11 @@ fn main() {
         .compile(&["proto/helloworld/helloworld.proto"], &["proto"])
         .unwrap();
 
-    tonic_build::compile_protos("proto/echo/echo.proto").unwrap();
+    let out_dir = PathBuf::from("src/authentication");
+    tonic_build::configure()
+        .out_dir(out_dir)
+        .compile(&["proto/echo/echo.proto"], &["proto"])
+        .unwrap();
 
     tonic_build::configure()
         .server_mod_attribute("attrs", "#[cfg(feature = \"server\")]")

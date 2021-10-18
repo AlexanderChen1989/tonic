@@ -1,0 +1,2334 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'tonic'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=tonic"
+				],
+				"filter": {
+					"name": "tonic",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug benchmark 'decode'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bench=decode",
+					"--package=tonic"
+				],
+				"filter": {
+					"name": "decode",
+					"kind": "bench"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'tonic-build'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=tonic-build"
+				],
+				"filter": {
+					"name": "tonic-build",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'tonic-health'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=tonic-health"
+				],
+				"filter": {
+					"name": "tonic-health",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'tonic-types'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=tonic-types"
+				],
+				"filter": {
+					"name": "tonic-types",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'tonic-reflection'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=tonic-reflection"
+				],
+				"filter": {
+					"name": "tonic-reflection",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=server",
+					"--package=tonic-reflection"
+				],
+				"filter": {
+					"name": "server",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'tonic-web'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=tonic-web"
+				],
+				"filter": {
+					"name": "tonic-web",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'helloworld-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=helloworld-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "helloworld-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'helloworld-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=helloworld-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "helloworld-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'helloworld-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=helloworld-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "helloworld-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'helloworld-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=helloworld-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "helloworld-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'blocking-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=blocking-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "blocking-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'blocking-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=blocking-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "blocking-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'routeguide-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=routeguide-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "routeguide-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'routeguide-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=routeguide-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "routeguide-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'routeguide-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=routeguide-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "routeguide-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'routeguide-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=routeguide-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "routeguide-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'authentication-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=authentication-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "authentication-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'authentication-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=authentication-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "authentication-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'authentication-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=authentication-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "authentication-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'authentication-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=authentication-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "authentication-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'load-balance-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=load-balance-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "load-balance-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'load-balance-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=load-balance-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "load-balance-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'load-balance-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=load-balance-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "load-balance-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'load-balance-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=load-balance-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "load-balance-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'dynamic-load-balance-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=dynamic-load-balance-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "dynamic-load-balance-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'dynamic-load-balance-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=dynamic-load-balance-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "dynamic-load-balance-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'dynamic-load-balance-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=dynamic-load-balance-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "dynamic-load-balance-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'dynamic-load-balance-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=dynamic-load-balance-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "dynamic-load-balance-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tls-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tls-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tls-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tls-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tls-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tls-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tls-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tls-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tls-client-auth-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tls-client-auth-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-client-auth-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tls-client-auth-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tls-client-auth-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-client-auth-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tls-client-auth-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tls-client-auth-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-client-auth-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tls-client-auth-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tls-client-auth-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tls-client-auth-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tower-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tower-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tower-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tower-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tower-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tower-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tower-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tower-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tower-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tower-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tower-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tower-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'timeout-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=timeout-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "timeout-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'timeout-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=timeout-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "timeout-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'timeout-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=timeout-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "timeout-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'timeout-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=timeout-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "timeout-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'multiplex-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=multiplex-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "multiplex-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'multiplex-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=multiplex-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "multiplex-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'multiplex-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=multiplex-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "multiplex-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'multiplex-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=multiplex-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "multiplex-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'gcp-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=gcp-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "gcp-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'gcp-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=gcp-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "gcp-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tracing-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tracing-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tracing-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tracing-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tracing-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tracing-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'tracing-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=tracing-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tracing-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'tracing-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=tracing-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "tracing-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'uds-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=uds-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "uds-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'uds-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=uds-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "uds-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'uds-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=uds-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "uds-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'uds-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=uds-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "uds-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'interceptor-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=interceptor-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "interceptor-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'interceptor-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=interceptor-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "interceptor-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'interceptor-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=interceptor-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "interceptor-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'interceptor-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=interceptor-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "interceptor-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'hyper-warp-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=hyper-warp-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'hyper-warp-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=hyper-warp-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'hyper-warp-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=hyper-warp-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'hyper-warp-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=hyper-warp-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'health-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=health-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "health-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'health-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=health-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "health-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'reflection-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=reflection-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "reflection-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'reflection-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=reflection-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "reflection-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'autoreload-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=autoreload-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "autoreload-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'autoreload-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=autoreload-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "autoreload-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'optional-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=optional-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "optional-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'optional-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=optional-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "optional-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'hyper-warp-multiplex-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=hyper-warp-multiplex-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-multiplex-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'hyper-warp-multiplex-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=hyper-warp-multiplex-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-multiplex-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'hyper-warp-multiplex-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=hyper-warp-multiplex-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-multiplex-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'hyper-warp-multiplex-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=hyper-warp-multiplex-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "hyper-warp-multiplex-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'compression-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=compression-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "compression-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'compression-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=compression-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "compression-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'compression-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=compression-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "compression-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'compression-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=compression-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "compression-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'mock'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=mock",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "mock",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'mock'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=mock",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "mock",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'grpc-web-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=grpc-web-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "grpc-web-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'grpc-web-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=grpc-web-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "grpc-web-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'grpc-web-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=grpc-web-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "grpc-web-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'grpc-web-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=grpc-web-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "grpc-web-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'streaming-client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=streaming-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "streaming-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'streaming-client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=streaming-client",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "streaming-client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'streaming-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=streaming-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "streaming-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'streaming-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=streaming-server",
+					"--package=examples"
+				],
+				"filter": {
+					"name": "streaming-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'interop'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=interop"
+				],
+				"filter": {
+					"name": "interop",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'client'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=client",
+					"--package=interop"
+				],
+				"filter": {
+					"name": "client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'client'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=client",
+					"--package=interop"
+				],
+				"filter": {
+					"name": "client",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=server",
+					"--package=interop"
+				],
+				"filter": {
+					"name": "server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=server",
+					"--package=interop"
+				],
+				"filter": {
+					"name": "server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'included_service'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=included_service"
+				],
+				"filter": {
+					"name": "included_service",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'same_name'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=same_name"
+				],
+				"filter": {
+					"name": "same_name",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'service_named_service'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=service_named_service"
+				],
+				"filter": {
+					"name": "service_named_service",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'wellknown'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=wellknown"
+				],
+				"filter": {
+					"name": "wellknown",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'wellknown-compiled'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=wellknown-compiled"
+				],
+				"filter": {
+					"name": "wellknown-compiled",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'uuid1'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=uuid1"
+				],
+				"filter": {
+					"name": "uuid1",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'ambiguous_methods'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=ambiguous_methods",
+					"--package=ambiguous_methods"
+				],
+				"filter": {
+					"name": "ambiguous_methods",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'ambiguous_methods'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=ambiguous_methods",
+					"--package=ambiguous_methods"
+				],
+				"filter": {
+					"name": "ambiguous_methods",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'my_application'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=my_application",
+					"--package=my_application"
+				],
+				"filter": {
+					"name": "my_application",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'my_application'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=my_application",
+					"--package=my_application"
+				],
+				"filter": {
+					"name": "my_application",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'integration-tests'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "integration-tests",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'timeout'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=timeout",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "timeout",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'connect_info'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=connect_info",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "connect_info",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'user_agent'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=user_agent",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "user_agent",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'status'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=status",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "status",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'connection'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=connection",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "connection",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'extensions'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=extensions",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "extensions",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'complex_tower_middleware'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=complex_tower_middleware",
+					"--package=integration-tests"
+				],
+				"filter": {
+					"name": "complex_tower_middleware",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'stream_conflict'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=stream_conflict",
+					"--package=stream_conflict"
+				],
+				"filter": {
+					"name": "stream_conflict",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'stream_conflict'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=stream_conflict",
+					"--package=stream_conflict"
+				],
+				"filter": {
+					"name": "stream_conflict",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'root-crate-path'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=root-crate-path",
+					"--package=root-crate-path"
+				],
+				"filter": {
+					"name": "root-crate-path",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'root-crate-path'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=root-crate-path",
+					"--package=root-crate-path"
+				],
+				"filter": {
+					"name": "root-crate-path",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'compression'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=compression"
+				],
+				"filter": {
+					"name": "compression",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'integration'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=integration"
+				],
+				"filter": {
+					"name": "integration",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'grpc'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=grpc",
+					"--package=integration"
+				],
+				"filter": {
+					"name": "grpc",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'grpc_web'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=grpc_web",
+					"--package=integration"
+				],
+				"filter": {
+					"name": "grpc_web",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}
